@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Portal</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>☀ Weather<span>Portal</span></h1>
+        <p>Discover the weather around you.</p>
+    </header>
+    <form class="search-form" id="weather-form">
+        <input
+            type="text"
+            id="city-input"
+            placeholder="Enter city name..."
+            autocomplete="off"
+            required
+        >
+        <button type="submit" id="search-button">Search</button>
+    </form>
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Fetching weather information...</p>
+    </div>
+    <div id="error" class="error hidden" role="alert"></div>
+    <section id="weather" class="weather hidden">
+        <h2 id="city-name"></h2>
+        <p id="date" class="date"></p>
+        <div class="main-weather">
+            <img id="weather-icon" src="" alt="Weather icon">
+            <div>
+                <div class="temperature">
+                    <span id="temperature">--</span>°C
+                </div>
+                <p id="description" class="description"></p>
+            </div>
+        </div>
+        <div class="details">
+            <div class="card">
+                <div>🌡️</div>
+                <p>Feels Like</p>
+                <h3><span id="feels-like">--</span>°C</h3>
+            </div>
+            <div class="card">
+                <div>💧</div>
+                <p>Humidity</p>
+                <h3><span id="humidity">--</span>%</h3>
+            </div>
+            <div class="card">
+                <div>💨</div>
+                <p>Wind Speed</p>
+                <h3><span id="wind">--</span> m/s</h3>
+            </div>
+            <div class="card">
+                <div>📊</div>
+                <p>Pressure</p>
+                <h3><span id="pressure">--</span> hPa</h3>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Weather Portal &copy; <span id="year"></span></p>
+        <p>Weather data powered by OpenWeatherMap</p>
+    </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
